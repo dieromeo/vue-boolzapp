@@ -66,14 +66,18 @@
                     </div>
                     <!-- chat  -->
                     <div class="chats">
-                        <div class="contact-chat" v-for="contact in contacts">
-                            <div class="user-container flex">
-                                <div class="round-container">
-                                    <a href="http://"><img :src="contact.avatar" alt="contact.name"></a>
+                        <ul>
+                            <li v-for="contact in contacts">
+                                <div class="contact-chat">
+                                    <div class="user-container flex">
+                                        <div class="round-container">
+                                            <a href="http://"><img :src="contact.avatar" alt="contact.name"></a>
+                                        </div>
+                                        <span class="font-bold">{{ contact.name }}</span>
+                                    </div>
                                 </div>
-                                <span class="font-bold">{{ contact.name }}</span>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </main>
             </div>
@@ -104,8 +108,23 @@
                         </ul>
                     </div>
                 </header>
+                <!-- main  -->
                 <main></main>
-                <footer></footer>
+                <!-- footer  -->
+                <footer class="flex">
+                    <!-- footer left  -->
+                    <div class="footer-left">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <!-- footer center  -->
+                    <div class="footer-center">
+                        <input type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <!-- footer right  -->
+                    <div class="footer-right">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
