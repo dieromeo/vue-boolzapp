@@ -123,7 +123,7 @@ header i {
 }
 
 .contact-chat {
-    border-bottom: 1px solid var(--header);
+    border-bottom: 1px solid var(--header-footer);
     cursor: pointer;
 }
 
@@ -166,6 +166,8 @@ righ side
 
 .right-side footer i {
     margin: 0 2.1875rem;
+    color: var(--footer-icon);
+    cursor: pointer;
 }
 
 .right-side footer .footer-center {
