@@ -149,6 +149,7 @@ righ side
 }
 
 .right-side main {
+    flex-direction: column;
     flex-grow: 1;
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
@@ -180,4 +181,24 @@ righ side
     height: 100%;
     padding-left: 1.25rem;
     border-radius: .3125rem;
+}
+
+.message {
+    margin: .625rem;
+    border-radius: 10px;
+    width: 20rem;
+    min-height: 3.25rem;
+    padding: 1.25rem;
+}
+
+.sent {
+    background-color: var(--sent);
+    align-self: flex-end;
+    margin-right: 6.25rem;
+}
+
+.received {
+    background-color: white;
+    align-self: flex-start;
+    margin-left: 6.25rem;
 }
