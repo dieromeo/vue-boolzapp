@@ -51,6 +51,10 @@ left side
     padding: 1.5625rem;
 }
 
+header i {
+    margin-left: 1.25rem;
+}
+
 /* main  */
 
 .notifications {
@@ -75,6 +79,30 @@ left side
     text-decoration: underline;
     line-height: 1.5rem;
     cursor: pointer;
+}
+
+.search-chat {
+    padding: 10px;
+    background-color: var(--search-bar);
+}
+
+.search-chat i {
+    font-size: 1.125rem;
+    margin-left: 1.25rem;
+    margin-right: 1.875rem;
+    cursor: pointer;
+}
+
+.search-chat input {
+    flex-grow: 1;
+    padding: .625rem;
+}
+
+.search-bar {
+    width: 100%;
+    background-color: white;
+
+    border-radius: .125rem;
 }
 
 /* 

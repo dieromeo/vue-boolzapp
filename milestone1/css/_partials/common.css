@@ -48,7 +48,6 @@ header {
 i {
     font-size: 1.375rem;
     color: var(--icons);
-    margin-left: 1.25rem;
 }
 
 ul {
@@ -63,4 +62,8 @@ ul {
 .small-grey {
     font-size: .875rem;
     color: var(--alternative-font);
+}
+
+button {
+    all: unset;
 }
