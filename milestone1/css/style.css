@@ -31,7 +31,6 @@ left side
  */
 
 .left-side {
-    border: 1px solid black;
     width: 35%;
     height: 100%;
     flex-direction: column;
@@ -140,7 +139,18 @@ righ side
 */
 
 .right-side {
-    border: 1px solid black;
     width: 65%;
     height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.right-side main {
+    flex-grow: 1;
+    background-color: red;
+    overflow-y: scroll;
+}
+
+.right-side footer {
+    height: 4.375rem;
 }
