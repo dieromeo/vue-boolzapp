@@ -22,7 +22,7 @@
         <!-- div contenitore applicativo  -->
         <div class="big-container flex">
             <!-- Parte sinistra con chat  -->
-            <div class="left-side">
+            <div class="left-side flex">
                 <!-- header parte sinistra  -->
                 <header class="left-header flex">
                     <div class="user-container flex">
@@ -46,7 +46,7 @@
                         </ul>
                     </div>
                 </header>
-                <main>
+                <main class="flex">
                     <!-- notifiche  -->
                     <div class="notifications flex">
                         <div class="round-container flex bell-container">
@@ -64,7 +64,17 @@
                             <input type="text" placeholder="Cerca o inizia nuova chat">
                         </div>
                     </div>
-                    <div class="chats"></div>
+                    <!-- chat  -->
+                    <div class="chats">
+                        <div class="contact-chat" v-for="contact in contacts">
+                            <div class="user-container flex">
+                                <div class="round-container">
+                                    <a href="http://"><img :src="contact.avatar" alt="contact.name"></a>
+                                </div>
+                                <span class="font-bold">{{ contact.name }}</span>
+                            </div>
+                        </div>
+                    </div>
                 </main>
             </div>
             <div class="right-side"></div>

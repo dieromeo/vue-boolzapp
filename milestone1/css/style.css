@@ -34,6 +34,7 @@ left side
     border: 1px solid black;
     width: 35%;
     height: 100%;
+    flex-direction: column;
 }
 
 .left-side>div {
@@ -55,7 +56,12 @@ header i {
     margin-left: 1.25rem;
 }
 
-/* main  */
+/* main */
+.left-side main {
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
 
 .notifications {
     background-color: var(--notifications);
@@ -81,6 +87,8 @@ header i {
     cursor: pointer;
 }
 
+/* search */
+
 .search-chat {
     padding: 10px;
     background-color: var(--search-bar);
@@ -103,6 +111,28 @@ header i {
     background-color: white;
 
     border-radius: .125rem;
+}
+
+/* chats */
+
+.chats {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.contact-chat {
+    border-bottom: 1px solid var(--header);
+    cursor: pointer;
+}
+
+.contact-chat :hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contact-chat .round-container {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-left: .625rem;
 }
 
 /* 
