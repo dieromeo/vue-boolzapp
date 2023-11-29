@@ -10,8 +10,47 @@ body {
     height: 100vh;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 .body-top {
     background-color: var(--body-top);
     width: 100%;
     height: 15%;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    background-color: var(--header);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4.375rem;
+}
+
+.round-container {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    margin-right: 1.25rem;
+}
+
+.round-container img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+i {
+    font-size: 1.375rem;
+    color: var(--icons);
+    margin-left: 1.25rem;
+}
+
+ul {
+    list-style: none;
 }

@@ -24,10 +24,11 @@ BODY
     right: 5%;
     max-width: 86.25rem;
     margin: 0 auto;
-    display: flex;
 }
 
-/* left side */
+/* 
+left side
+ */
 
 .left-side {
     border: 1px solid black;
@@ -35,7 +36,20 @@ BODY
     height: 100%;
 }
 
-/* righ side */
+/* header  */
+
+.user-container {
+    align-items: center;
+    padding: .625rem;
+}
+
+.icon-container {
+    padding: 1.5625rem;
+}
+
+/* 
+righ side 
+*/
 
 .right-side {
     border: 1px solid black;
