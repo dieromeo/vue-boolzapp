@@ -5,3 +5,23 @@ IMPORT
 */
 
 @import url('_partials/reset.css');
+@import url('_partials/common.css');
+@import url('_partials/variables.css');
+
+/* 
+************
+BODY 
+************
+*/
+
+.big-container {
+    background-color: red;
+    height: 95vh;
+    z-index: 99;
+    position: fixed;
+    top: 2.5%;
+    left: 5%;
+    right: 5%;
+    max-width: 86.25rem;
+    margin: 0 auto;
+}
