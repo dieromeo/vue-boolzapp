@@ -29,7 +29,7 @@
                         <div class="round-container">
                             <a href="http://"><img :src="myInfo.avatar" alt="myInfo.name"></a>
                         </div>
-                        <span>{{`${myInfo.name} ${myInfo.lastName}`}}</span>
+                        <span class="font-bold">{{`${myInfo.name} ${myInfo.lastName}`}}</span>
                     </div>
                     <!-- container con lista icone  -->
                     <div class="icon-container flex">
@@ -46,6 +46,19 @@
                         </ul>
                     </div>
                 </header>
+                <main>
+                    <div class="notifications flex">
+                        <div class="round-container flex bell-container">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Ricevi nuove notifiche di messaggi</p>
+                            <p class="small-grey notifications-on">Attiva notifiche desktop</p>
+                        </div>
+                    </div>
+                    <div class="search-chat"></div>
+                    <div class="chats"></div>
+                </main>
             </div>
             <div class="right-side"></div>
         </div>

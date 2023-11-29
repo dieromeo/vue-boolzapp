@@ -36,6 +36,10 @@ left side
     height: 100%;
 }
 
+.left-side>div {
+    width: 100%;
+}
+
 /* header  */
 
 .user-container {
@@ -45,6 +49,32 @@ left side
 
 .icon-container {
     padding: 1.5625rem;
+}
+
+/* main  */
+
+.notifications {
+    background-color: var(--notifications);
+    height: 5rem;
+    padding: 1.25rem;
+    align-items: center;
+}
+
+.bell-container {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.bell-container i {
+    margin: 0;
+    color: var(--notifications);
+}
+
+.notifications-on {
+    text-decoration: underline;
+    line-height: 1.5rem;
+    cursor: pointer;
 }
 
 /* 
