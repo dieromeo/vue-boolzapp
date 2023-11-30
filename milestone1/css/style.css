@@ -17,13 +17,8 @@ BODY
 .big-container {
     background-color: white;
     height: 95vh;
-    z-index: 99;
-    position: fixed;
-    top: 2.5%;
-    left: 5%;
-    right: 5%;
-    max-width: 86.25rem;
-    margin: 0 auto;
+    width: 90vw;
+
 }
 
 /* 

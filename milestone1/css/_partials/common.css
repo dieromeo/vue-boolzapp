@@ -6,8 +6,11 @@ COMMON
 
 body {
     font-family: 'Lato', sans-serif;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #00000033;
     height: 100vh;
+    background-image: linear-gradient(to bottom, #009788 11%, #dbdbd1 11%);
+    justify-content: center;
+    align-items: center;
 }
 
 [v-cloak] {
