@@ -73,7 +73,11 @@
                                         <div class="round-container">
                                             <a href="http://"><img :src="contact.avatar" alt="contact.name"></a>
                                         </div>
-                                        <span class="font-bold">{{ contact.name }}</span>
+                                        <div>
+                                            <span class="font-bold">{{ contact.name }}</span>
+                                            <p class="small-grey">Ultimo messaggio inviato</p>
+                                        </div>
+                                        <div class="last-message small-grey">{{hour}}</div>
                                     </div>
                                 </div>
                             </li>

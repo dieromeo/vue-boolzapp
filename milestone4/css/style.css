@@ -42,6 +42,7 @@ left side
 .user-container {
     align-items: center;
     padding: .625rem;
+    justify-content: space-between;
 }
 
 .icon-container {
@@ -129,6 +130,11 @@ header i {
     width: 3.75rem;
     height: 3.75rem;
     margin-left: .625rem;
+}
+
+.last-message {
+    font-size: 10px;
+    align-self: flex-start;
 }
 
 /* 
