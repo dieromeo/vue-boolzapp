@@ -92,7 +92,7 @@
                         </div>
                         <div>
                             <span class="font-bold">{{ contact.name }}</span>
-                            <p class="small-grey">Ultimo accesso oggi alle</p>
+                            <p class="small-grey">Ultimo accesso oggi alle {{hour}} </p>
                         </div>
                     </div>
                     <div class="icon-container flex">
@@ -114,7 +114,7 @@
                     <div class="message flex" v-for="message in contacts[currentIndex].messages"
                         :class="message.status === 'received' ? 'received' : 'sent'">
                         <div class="message-text">{{message.message}}</div>
-                        <div class="date">{{message.date[1]}}</div>
+                        <div class="date">{{message.date.currentHour}}</div>
                     </div>
                 </main>
                 <!-- footer  -->
