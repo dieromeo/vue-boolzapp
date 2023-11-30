@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- my css  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="flex">
+    <!--div per background body  -->
+    <div id="app" v-cloak>
+        <!-- div contenitore applicativo  -->
+        <div class="big-container flex">
+            <!-- Parte sinistra con contatti chat  -->
+            <div class="left-side flex">
+                <!-- header parte sinistra  -->
+                <header class="left-header flex">
+                    <div class="user-container flex">
+                        <div class="round-container">
+                            <a href="http://"><img :src="myInfo.avatar" alt="myInfo.name"></a>
+                        </div>
+                        <span class="font-bold">{{`${myInfo.name} ${myInfo.lastName}`}}</span>
+                    </div>
+                    <!-- container con lista icone  -->
+                    <div class="icon-container flex">
+                        <ul class="flex">
+                            <li>
+                                <a href="http://#"><i class="fa-solid fa-circle-notch"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://"><i class="fa-solid fa-message"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <main class="flex">
+                    <!-- notifiche  -->
+                    <div class="notifications flex">
+                        <div class="round-container flex bell-container">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Ricevi nuove notifiche di messaggi</p>
+                            <p class="small-grey notifications-on">Attiva notifiche desktop</p>
+                        </div>
+                    </div>
+                    <!-- barra di ricerca -->
+                    <div class="search-chat">
+                        <div class="search-bar flex">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                            <input type="text" placeholder="Cerca o inizia nuova chat">
+                        </div>
+                    </div>
+                    <!-- chat  -->
+                    <div class="chats">
+                        <ul>
+                            <li v-for="(contact, index) in contacts" @click="getIndex(index)" :class="setActive(index)">
+                                <div class="contact-chat">
+                                    <div class="user-container flex">
+                                        <div class="round-container">
+                                            <a href="http://"><img :src="contact.avatar" alt="contact.name"></a>
+                                        </div>
+                                        <span class="font-bold">{{ contact.name }}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+            <!-- Parte destra con chat  -->
+            <div class="right-side flex">
+                <!-- header con chat attiva  -->
+                <header class="right-header flex">
+                    <div class="user-container flex" v-for="(contact, index) in contacts"
+                        :class="currentIndex === index ? 'active' : 'd-none'">
+                        <div class="round-container">
+                            <a href="http://"><img :src="contact.avatar" alt="contact.name"></a>
+                        </div>
+                        <div>
+                            <span class="font-bold">{{ contact.name }}</span>
+                            <p class="small-grey">Ultimo accesso oggi alle</p>
+                        </div>
+                    </div>
+                    <div class="icon-container flex">
+                        <ul class="flex">
+                            <li>
+                                <a href="http://#"><i class="fas fa-search"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://"><i class="fa-solid fa-paperclip"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <!-- main  -->
+                <main class="flex">
+                    <div class="message" v-for="message in contacts[currentIndex].messages"
+                        :class="message.status === 'received' ? 'received' : 'sent'">{{message.message}}</div>
+                </main>
+                <!-- footer  -->
+                <footer class="flex">
+                    <!-- footer left  -->
+                    <div class="footer-left">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <!-- footer center  -->
+                    <div class="footer-center">
+                        <input type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage"
+                            v-model="userText">
+                    </div>
+                    <!-- footer right  -->
+                    <div class="footer-right">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- vue js  -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- javascript  -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
