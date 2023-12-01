@@ -68,7 +68,7 @@
                         <ul>
                             <li v-for="(contact, index) in searchedChat()" @click="getIndex(index)"
                                 :class="setActive(index)">
-                                <div class="contact-chat">
+                                <div class="contact-chat" @click="getMessageIndex(index)">
                                     <div class="user-container flex">
                                         <div class="round-container">
                                             <a href="http://"><img :src="contact.avatar" alt="contact.name"></a>
@@ -77,7 +77,8 @@
                                             <span class="font-bold">{{ contact.name }}</span>
                                             <p class="small-grey">Ultimo messaggio inviato</p>
                                         </div>
-                                        <div class="last-message small-grey">{{hour}}</div>
+                                        <div class="last-message small-grey">
+                                            {{hour}}</div>
                                     </div>
                                 </div>
                             </li>
@@ -89,14 +90,14 @@
             <div class="right-side flex">
                 <!-- header con chat attiva  -->
                 <header class="right-header flex">
-                    <div class="user-container flex" v-for="(contact, index) in contacts"
+                    <div class="user-container flex" v-for="(contact, index) in searchedChat()"
                         :class="currentIndex === index ? 'active' : 'd-none'">
                         <div class="round-container">
                             <a href="http://"><img :src="contact.avatar" alt="contact.name"></a>
                         </div>
                         <div>
                             <span class="font-bold">{{ contact.name }}</span>
-                            <p class="small-grey">Ultimo accesso oggi alle {{hour}} </p>
+                            <p class="small-grey">Ultimo accesso oggi alle {{prova2}} </p>
                         </div>
                     </div>
                     <div class="icon-container flex">
@@ -115,7 +116,7 @@
                 </header>
                 <!-- main  -->
                 <main class="flex">
-                    <div class="message flex" v-for="message in contacts[currentIndex].messages"
+                    <div class="message flex" v-for="message in searchedChat()[currentIndex].messages"
                         :class="message.status === 'received' ? 'received' : 'sent'">
                         <div class="message-text">{{message.message}}</div>
                         <div class="date">{{message.date.currentHour}}</div>

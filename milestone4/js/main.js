@@ -9,6 +9,8 @@ createApp({
             currentIndex: 0,
             userText: '',
             searchText: '',
+            prova: 0,
+            prova2: '16:15',
             hour: `${DateTime.local().hour}:${DateTime.local().minute}`,
             myInfo: {
                 name: 'Diego',
@@ -205,13 +207,20 @@ createApp({
         },
         searchedChat() {
             if (this.searchText.trim() !== '') {
-                return this.contacts.filter((contact) => contact.name.toLowerCase().includes(this.searchText.toLowerCase()));
+                return this.contacts.filter((contact) =>
+                    contact.name.toLowerCase().includes(this.searchText.toLowerCase())
+                );
             } else {
                 return this.contacts;
             }
-
         },
-    }
+        getMessageIndex(index) {
+            this.prova = (this.contacts[index].messages.length - 1);
+            this.prova2 = this.contacts[index].messages[this.prova].date.currentHour;
+            console.log(this.prova);
+            console.log(this.prova2);
+        }
+    },
 }).mount('#app');
 
 
