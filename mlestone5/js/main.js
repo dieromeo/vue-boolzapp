@@ -12,6 +12,7 @@ createApp({
             prova: 0,
             prova2: '16:15',
             hour: `${DateTime.local().hour}:${DateTime.local().minute}`,
+            randomAnswers: ['Va bene!', 'Ci vediamo!', 'Ora non posso, ti chiamo poi dopo'],
             myInfo: {
                 name: 'Diego',
                 lastName: 'Romeo',
@@ -240,11 +241,14 @@ createApp({
                 return ''
             }
         },
+        setRandomAnswer() {
+            return this.randomAnswers[Math.floor(Math.random() * this.randomAnswers.length)];
+        },
         sendMessage() {
             if (this.userText.trim() !== '') {
                 this.contacts[this.currentIndex].messages.push({ date: { day: '', currentHour: this.hour, second: '' }, message: this.userText, arrowStatus: 'd-none', menuStatus: 'd-none', status: 'sent' });
                 this.userText = '';
-                setTimeout(() => { this.contacts[this.currentIndex].messages.push({ date: { day: '', currentHour: this.hour, second: '' }, message: 'Ok!', arrowStatus: 'd-none', menuStatus: 'd-none', status: 'received' }) }, 1000);
+                setTimeout(() => { this.contacts[this.currentIndex].messages.push({ date: { day: '', currentHour: this.hour, second: '' }, message: this.setRandomAnswer(), arrowStatus: 'd-none', menuStatus: 'd-none', status: 'received' }) }, 1000);
             }
         },
         searchedChat() {
