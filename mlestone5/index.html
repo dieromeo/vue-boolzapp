@@ -124,11 +124,11 @@
                             <div class="arrow" :class="message.arrowStatus"><i class="fa-solid fa-angle-down"
                                     @click="showMenu(message)"></i></div>
                             <div class="message-menu" :class="message.menuStatus">
-                                <div>
-                                    <p>message info</p>
+                                <div class="message-info">
+                                    <p>Message info</p>
                                 </div>
                                 <div class="delete" @click="deleteMessage(index)">
-                                    <p>delete message</p>
+                                    <p>Delete message</p>
                                 </div>
                             </div>
                             {{message.date.currentHour}}

@@ -230,12 +230,21 @@ righ side
 
 .message-menu {
     position: absolute;
-    background-color: white;
-    font-size: 1.125rem;
-    width: 6.25rem;
+    background-color: whitesmoke;
+    font-size: .875rem;
+    width: 9.375rem;
     z-index: 99;
+    border-radius: .3125rem;
+    top: 2.5rem;
+    left: 16.25rem;
 }
 
 .delete {
     border-top: 1px solid black;
+}
+
+.message-info,
+.delete {
+    padding: .3125rem;
+    cursor: pointer;
 }
