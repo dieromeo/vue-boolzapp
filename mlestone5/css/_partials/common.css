@@ -58,6 +58,10 @@ ul {
     padding: 0;
 }
 
+a {
+    display: block;
+}
+
 .font-bold {
     font-weight: bold;
 }

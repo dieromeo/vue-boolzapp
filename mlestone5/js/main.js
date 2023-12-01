@@ -270,6 +270,7 @@ createApp({
         arrowHidden(message) {
             if (message.arrowStatus === 'd-block') {
                 message.arrowStatus = 'd-none'
+                message.menuStatus = 'd-none'
             }
         },
         showMenu(message) {
